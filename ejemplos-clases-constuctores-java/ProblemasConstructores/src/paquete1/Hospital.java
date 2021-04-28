@@ -25,7 +25,21 @@ public class Hospital {
     numeroEnfermeros: 200
     
     */
-    
+    public Hospital(){
+        nombre = "Isidro Ayora";
+        ciudad = "Loja";
+        numeroDoctores = 100;
+        numeroEnfermeros = 200;
+    }
+    public String toString(){
+        String cadena = String.format("Datos del Hospital\nNombre: %s\n"
+                + "Ciudad: %s\nNumero de Doctores: %d\n"
+                + "Numero de enfermeros: %d\n", obtenerNombre(), 
+                obtenerCiudad(), obtenerNumeroDoctores(), 
+                obtenerNumeroEnfermeros());
+        return cadena;
+    }
+   
     public void establecerNombre(String n){
         nombre = n;
     }
